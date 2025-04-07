@@ -40,7 +40,7 @@ body {
 }
 
 .wrapper {
-    max-width: 1440px !important;
+    max-width: 1380px !important;
 }
 
 
@@ -58,7 +58,7 @@ body {
 
 /* font size  */
 .fs_5 {
-    font-size: 1.10rem !important;
+    font-size: 1.15rem !important;
 }
 
 .fs_6 {
@@ -133,6 +133,10 @@ body {
     color: var(--dark_em) !important;
 }
 
+.text_highlight {
+    color: var(--highlight) !important;
+}
+
 /* buttons  */
 
 button {
@@ -194,6 +198,23 @@ button.shiny_btn svg {
     fill: var(--black) !important;
 }
 
+.btn_secondary_outline {
+    background: transparent !important;
+    color: var(--secondary);
+    fill: var(--secondary);
+    padding: 0.65rem 1.25rem !important;
+    border: 1px solid var(--secondary);
+    border-radius: 100px;
+    box-shadow: 0px 0px 8px 0px #00000036;
+    transition: 0.25s;
+}
+
+.btn_secondary_outline:hover {
+    background: var(--secondary) !important;
+    color: var(--black) !important;
+    fill: var(--black) !important;
+}
+
 .btn_dark_gray {
     background: var(--light_dark) !important;
     color: var(--light_gray);
@@ -246,7 +267,7 @@ button.shiny_btn svg {
 
 /* navbar  */
 #nav {
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     left: 0;
