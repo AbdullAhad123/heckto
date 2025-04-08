@@ -69,6 +69,6 @@ header {
 
 /* about  */
 #about {
-    background: url('../img/bg_shining.webp') center, linear-gradient(29deg, #343434, #1f1f1f) !important;
+    background: url('../img/bg_shining.webp') center, linear-gradient(29deg, #262626, #191919) !important;
     background-size: cover;
 }
