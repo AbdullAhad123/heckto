@@ -96,9 +96,85 @@
         <section class="my-5">
             <div class="container-lg wrapper">
                 <div class="text-center">
-                    <h2 class="text_light fs-1 fw-bold">Digital Evolution <br> through Intelligent Adaptation</h2>
-                    <div class="heading_line bg_secondary mb-4"></div>
+                    <!-- <p class="fs-5 text_highlight fw-semibold text-uppercase mb-1">Our Approach</p>
+                    <h2 class="text_light fs-1 fw-bold">Observe, Analyze, <br> <span class="text_highlight">Adapt & Thrive</span></h2>
+                    <div class="heading_line bg_secondary mb-4"></div> -->
                     <!-- <p class="text_light_em fs_5">In a world where technological landscapes shift daily, standing still means falling behind. Heckto offers a comprehensive suite of AI-powered services designed to keep you ahead of the curve. Our solutions aren't just built for today—they're engineered to evolve with tomorrow's challenges</p> -->
+                </div>
+                <style>
+                    .timeline {
+                        position: absolute;
+                        top: 0;
+                        left: 3px;
+                        height: 100%;
+                        width: 3px;
+                        background: linear-gradient(180deg, var(--highlight), var(--highlight));
+                        opacity: 0.75;
+                    }
+
+                    .timeline_point::after {
+                        content: "";
+                        height: 20px;
+                        width: 20px;
+                        background: var(--highlight);
+                        position: absolute;
+                        top: 50%;
+                        left: -29px;
+                        transform: translateY(-50%);
+                        border-radius: 10em;
+                    }
+
+                    .videoPlayBtn {
+                        height: 60px;
+                        width: 60px;
+                        background: var(--light);
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                </style>
+                <div class="row my-4 m-0 align-items-center">
+                    <div class="col-lg-7 col-md-6 col-12 my-3">
+                        <h2 class="text_light fs-1 fw-bold">About us</h2>
+                        <p class="fs-5 fw-semibold text_light_em fst-italic">In the digital realm, we embody this same remarkable adaptability. Our team of global experts doesn't just build software; we craft intelligent solutions that respond to your business ecosystem, anticipate market shifts, and evolve alongside your organization</p>
+                        <p class="fs-5 fw-semibold text_light_em fst-italic">We begin by understanding your environment—the market conditions, competitive landscape, and unique challenges you face. Through powerful AI-driven analysis, we identify opportunities for transformation. Then, like the chameleon, we adapt our solutions to perfectly fit your needs, ensuring you don't just survive in your industry—you thrive.</p>
+                        <button class="btn_secondary my-2 shiny_btn d-inline-flex align-items-center gap-1 arrow_right_top ms-auto">
+                            <span class="fw-semibold">Get Started</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="20" width="20"><path d="M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M6,13H14L10.5,16.5L11.92,17.92L17.84,12L11.92,6.08L10.5,7.5L14,11H6V13Z"></path></svg>
+                        </button>
+                    </div>
+                    <div class="col-lg-5 col-md-6 col-12 my-3">
+                        <div class="position-relative timeline_container d-flex py-4">
+                            <div class="timeline"></div>
+                            <div class="ps-4">
+                                <div class="timeline_point position-relative text_white py-2">
+                                    <p class="fs-5 fw-bold text-uppercase m-0">Observe</p>
+                                    <p class="fs_5 text_light m-0">Understand your needs, market trends, and vision.</p>
+                                </div>
+                                <div class="timeline_point position-relative text_white py-2">
+                                    <p class="fs-5 fw-bold text-uppercase m-0">Analyze</p>
+                                    <p class="fs_5 text_light m-0">Dive into data, goals, and technical possibilities.</p>
+                                </div>
+                                <div class="timeline_point position-relative text_white py-2">
+                                    <p class="fs-5 fw-bold text-uppercase m-0">Adapt</p>
+                                    <p class="fs_5 text_light m-0">Craft tailored solutions using modern technologies.</p>
+                                </div>
+                                <div class="timeline_point position-relative text_white py-2">
+                                    <p class="fs-5 fw-bold text-uppercase m-0">Thrive</p>
+                                    <p class="fs_5 text_light m-0">Help your business grow with impactful digital tools.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-11 col-12 my-4 mx-auto">
+                    <div id="about_video" class="position-relative">
+                        <div class="videoPlayBtn d-flex align-items-center justify-content-center rounded-circle">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="28" width="28" fill="var(--dark)"><path d="M8,5.14V19.14L19,12.14L8,5.14Z" /></svg>
+                        </div>
+                        <video src="assets/img/about.mp4" poster="assets/img/intro_poster.png" class="rounded-4" width="100%"></video>
+                    </div>
                 </div>
             </div>
         </section>

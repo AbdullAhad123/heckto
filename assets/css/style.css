@@ -12,7 +12,7 @@ header {
     background: var(--dark);
     user-select: none;
     z-index: -1;
-    opacity: 0.75;
+    opacity: 0.6;
 }
 
 @keyframes scroll_1 {
