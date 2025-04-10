@@ -116,6 +116,10 @@ body {
     background: var(--dark_gray) !important;
 }
 
+.bg_highlight {
+    background: var(--highlight) !important;
+}
+
 /* text  */
 
 .text_white {
@@ -140,6 +144,10 @@ body {
 
 .text_highlight {
     color: var(--highlight) !important;
+}
+
+.text_secondary {
+    color: var(--secondary) !important;
 }
 
 /* buttons  */
@@ -234,6 +242,24 @@ button.shiny_btn svg {
 }
 
 .btn_light_outline_secondary:hover {
+    border: 1px solid var(--secondary);
+    background: var(--secondary) !important;
+    color: var(--black) !important;
+    fill: var(--black) !important;
+}
+
+.btn_light_outline {
+    background: transparent !important;
+    color: var(--light);
+    fill: var(--light);
+    padding: 0.65rem 1.25rem !important;
+    border: 1px solid var(--light);
+    border-radius: 100px;
+    box-shadow: 0px 0px 8px 0px #00000036;
+    transition: 0.25s;
+}
+
+.btn_light_outline:hover {
     border: 1px solid var(--secondary);
     background: var(--secondary) !important;
     color: var(--black) !important;

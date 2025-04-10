@@ -96,9 +96,23 @@
             </div>
         </header>
 
-        <section id="intro" class="py-2 pb-5">
-            <div class="container-lg wrapper">
-                <div id="introContent" class="rounded-4 p-md-4">
+        <style>
+            #intro .intro_shade {
+                position: absolute;
+                bottom: -180px;
+                left: -70px;
+                height: 300px;
+                width: 300px;
+                border-radius: 100em;
+                filter: blur(120px);
+                z-index: 0;
+                background: linear-gradient(51deg, #72dd00, #d1e2a0, #c94d14);
+                opacity: 0.5;
+            }
+        </style>
+        <section id="intro" class="py-2 pb-5 position-relative">
+            <div class="container-lg wrapper position-relative z-1">
+                <div id="introContent" class="rounded-4 p-4">
                     <div class="col-lg-9 col-md-11 col-12 my-2">
                         <h2 class="text_dark fw-bold">We don't just respond to change—we anticipate it!</h2>
                         <p class="text_dark_em fs_5 fw-medium">Heckto harnesses the power of artificial intelligence to create solutions that evolve with your business needs. Like our chameleon symbol, we blend seamlessly into your environment, delivering custom technology that adapts to your unique challenges.</p>
@@ -110,17 +124,18 @@
                         </button>
                     </div>
                 </div>
-            </div>
+            </div>`
+            <div class="intro_shade"></div>
         </section>
 
         <section id="about" class="mt-5">
             <div class="container-lg wrapper">
                 <div class="row align-items-end">
-                    <div class="col-lg-7 col-md-12 col-12 my-4 py-lg-3">
+                    <div class="col-lg-7 col-md-12 col-12 my-4 py-lg-4">
                         <h2 class="text_light fs-1 fw-bold">About us</h2>
                         <p class="text_light_em fs-5 fst-italic fw-medium mb-2">In the digital realm, we embody this same remarkable adaptability. Our team of global experts doesn't just build software; we craft intelligent solutions that respond to your business ecosystem, anticipate market shifts, and evolve alongside your organization.</p>
                         <p class="text_light_em fs-5 fst-italic fw-medium">We begin by understanding your environment—the market conditions, competitive landscape, and unique challenges you face. Through powerful <span class="fw-semibold text_highlight">AI-driven analysis</span>, we identify opportunities for transformation. Then, like the chameleon, we adapt our solutions to perfectly fit your needs, ensuring you don't just survive in your industry—you thrive.</p>
-                        <button class="btn_secondary shiny_btn d-inline-flex align-items-center gap-1 arrow_right_top">
+                        <button class="btn_secondary shiny_btn d-inline-flex align-items-center gap-1 arrow_right_top mt-2 mb-3">
                             <span class="fw-semibold">Get started</span>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="20" width="20"><path d="M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M6,13H14L10.5,16.5L11.92,17.92L17.84,12L11.92,6.08L10.5,7.5L14,11H6V13Z"></path></svg>
                         </button>
@@ -146,8 +161,9 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 object-fit: cover;
+                height: 100%;
                 width: 100%;
-                filter: brightness(0.75);
+                filter: brightness(0.5);
             }
 
             #playVideo {
@@ -159,7 +175,7 @@
                 border-radius: 100rem;
                 border: none;
                 outline: none;
-                box-shadow: 0px 0px 8px 0px #00000036;
+                box-shadow: 0px 0px 10px 2px #00000054;
                 transform: scale(1);
                 transition: transform 0.25s;
             }
@@ -168,9 +184,25 @@
                 transform: scale(1.1);
                 box-shadow: 0px 0px 12px 2px #00000051;
             }
+
+            .videoPopupContainer {
+                padding-top: 51.25%;
+                width: 100%;
+                position: relative;
+            }
+
+            .videoPopupContainer video {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
         </style>
         <section id="aboutVideo" class="d-flex align-items-center justify-content-center">
-            <img src="assets/img/intro_poster.png" alt="">
+            <img src="assets/img/about_poster.png" alt="">
             <div class="container-lg wrapper position-relative z-1 text-center">
                 <button id="playVideo" class="shiny_btn d-inline-flex align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#videoPopup">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="28" width="28"><path d="M8,5.14V19.14L19,12.14L8,5.14Z" /></svg>
@@ -178,12 +210,111 @@
             </div>
         </section>
 
+        <style>
+            #services .intro_shade {
+                position: absolute;
+                top: -100px;
+                right: -50px;
+                height: 320px;
+                width: 320px;
+                border-radius: 100em;
+                filter: blur(120px);
+                z-index: -1;
+                background: linear-gradient(51deg, #72dd00, #d1e2a0, #c94d14);
+                opacity: 0.5;
+            }
 
-        <!--  -->
-        <div class="modal fade" id="videoPopup" tabindex="-1" aria-labelledby="videoPopupLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+            .heading_line {
+                height: 5px;
+                width: 160px;
+                border-radius: 2em;
+
+            }
+
+            .services_card {
+                position: relative;
+                height: 500px;
+                width: auto;
+                overflow: hidden;
+            }
+
+            .services_card img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+            .services_content {
+                height: 100%;
+                width: 100%;
+                background: linear-gradient(180deg, transparent, #0000007b, #000000b7);
+                position: relative;
+                z-index: 1;
+            }
+        </style>
+        <section id="services" class="my-5 py-4 position-relative">
+            <div class="container-lg wrapper">
+                <div class="d-flex align-items-center justify-content-between flex-wrap mb-3">
+                    <h2 class="text_light display-6 fw-bolder my-2"><span class="text_highlight">Digital Evolution</span><br> through Intelligent Adaptation</h2>
+                    <button class="btn_light_outline d-inline-flex align-items-center gap-1 ms-auto my-2">
+                        <span class="fw-medium">View all services</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="20" width="20"><path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z" /></svg>
+                    </button>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-12 my-3">
+                        <div class="services_card rounded-3 shadow">
+                            <img src="assets/img/ai_automation.jpg" alt="">
+                            <div class="services_content p-md-4 p-3 py-4 d-flex align-items-end">
+                                <div class="mb-1">
+                                    <p class="text_highlight m-0 fw-semibold">Automate, Optimize & Revolutionize</p>
+                                    <h3 class="text_white fw-bold">AI Automation Creation</h3>
+                                    <p class="text_light fs_6 fw-medium m-0">Lorem ipsum dolor sit amet dolor sit amet consectetur adipisicing elit. Harum adipisci magni sequi fuga accusamus ex.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-12 my-3">
+                        <div class="services_card rounded-3 shadow">
+                            <img src="assets/img/website_development.jpg" alt="">
+                            <div class="services_content p-md-4 p-3 py-4 d-flex align-items-end">
+                                <div class="mb-1">
+                                    <p class="text_highlight m-0 fw-semibold">Websites that work as hard as you do</p>
+                                    <h3 class="text_white fw-bold">Website Development</h3>
+                                    <p class="text_light fs_6 fw-medium m-0">Lorem ipsum dolor sit amet dolor sit amet consectetur adipisicing elit. Harum adipisci magni sequi fuga accusamus ex.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-12 my-3">
+                        <div class="services_card rounded-3 shadow">
+                            <img src="assets/img/ai_automation.jpg" alt="">
+                            <div class="services_content p-md-4 p-3 py-4 d-flex align-items-end">
+                                <div class="mb-1">
+                                    <p class="text_highlight m-0 fw-semibold">Strategic Digital Engagement</p>
+                                    <h3 class="text_white fw-bold">Social Media Marketing</h3>
+                                    <p class="text_light fs_6 fw-medium m-0">Lorem ipsum dolor sit amet dolor sit amet consectetur adipisicing elit. Harum adipisci magni sequi fuga accusamus ex.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="intro_shade"></div>
+        </section>
+
+        <!-- modal -->
+        <div class="modal fade" id="videoPopup" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="videoPopupLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content p-0 bg-transparent border-0 rounded-3 overflow-hidden">
+                    <button type="button" id="stopVideo" class="btn_transparent shadow-none d-inline-flex align-items-center justify-content-center position-absolute top-0 end-0 m-1 z-1" data-bs-dismiss="modal" aria-label="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="22" width="22"><path d="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z" /></svg>
+                    </button>
+                    <div class="videoPopupContainer">
+                        <video src="assets/img/hackto_about.mp4" controls="true"></video>
+                    </div>
                 </div>
             </div>
         </div>
@@ -264,6 +395,21 @@
                 $(".scrollIndicator").fadeIn()
             }
         })
+
+        $("#playVideo").on('click', function () {
+            const video = $(".videoPopupContainer video")[0];
+            if (video.paused) {
+                video.play();
+            } 
+        });
+        
+        $("#stopVideo").on('click', function () {
+            const video = $(".videoPopupContainer video")[0];
+            if (video.play) {
+                video.pause();
+            } 
+        })
+
     </script>
 </body>
 
