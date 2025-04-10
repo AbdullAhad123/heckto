@@ -12,9 +12,10 @@
     --gray: #B0B0B0;
     --dark_gray: #444444;
     --primary: #004D61;
-    --secondary: #00DD00;
-    --dark_secondary: #00cb00;
-    --highlight: #FF1493;
+    --secondary: #72dd00;
+    --dark_secondary: #5fcb00;
+    --highlight: #D8E9A8;
+    --dark_highlight: #727e50;
     --light_em: #dededecb;
     --dark_em: #2d2d2d;
     --light: #f5f5f5d4;
@@ -23,8 +24,8 @@
 }
 
 ::selection {
-    background: var(--dark_gray) !important;
-    color: var(--light_gray) !important;
+    background: var(--white) !important;
+    color: var(--dark) !important;
 }
 
 html {
@@ -41,6 +42,10 @@ body {
 
 .wrapper {
     max-width: 1380px !important;
+}
+
+#content {
+    overflow-x: hidden;
 }
 
 
@@ -196,6 +201,7 @@ button.shiny_btn svg {
     background: var(--dark_secondary) !important;
     color: var(--black) !important;
     fill: var(--black) !important;
+    box-shadow: 0 0 10px var(--secondary);
 }
 
 .btn_secondary_outline {
@@ -210,6 +216,25 @@ button.shiny_btn svg {
 }
 
 .btn_secondary_outline:hover {
+    background: var(--secondary) !important;
+    color: var(--black) !important;
+    fill: var(--black) !important;
+    box-shadow: 0 0 10px var(--secondary);
+}
+
+.btn_light_outline_secondary {
+    background: transparent !important;
+    color: var(--light);
+    fill: var(--light);
+    padding: 0.65rem 1.25rem !important;
+    border: 1px solid var(--light);
+    border-radius: 100px;
+    box-shadow: 0px 0px 8px 0px #00000036;
+    transition: 0.25s;
+}
+
+.btn_light_outline_secondary:hover {
+    border: 1px solid var(--secondary);
     background: var(--secondary) !important;
     color: var(--black) !important;
     fill: var(--black) !important;
@@ -244,6 +269,22 @@ button.shiny_btn svg {
 }
 
 .btn_transparent:hover {
+    color: var(--white) !important;
+    fill: var(--white) !important;
+}
+
+.btn_light {
+    background: var(--light_em) !important;
+    color: var(--dark);
+    fill: var(--dark);
+    padding: 0.65rem 1.25rem !important;
+    border: 1px solid transparent;
+    border-radius: 100px;
+    box-shadow: 0px 0px 8px 0px #00000036;
+    transition: 0.25s;
+}
+
+.btn_light:hover {
     color: var(--white) !important;
     fill: var(--white) !important;
 }
