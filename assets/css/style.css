@@ -14,6 +14,24 @@ header {
     z-index: -1;
 }
 
+nav.navbar {
+    border-radius: 100px;
+}
+
+.scrollIndicator {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+#hero {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(to top, #181818, #121212c0, transparent);
+}
+
 @keyframes scroll_1 {
     0% {
         transform: translateY(0);
