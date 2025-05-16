@@ -9,7 +9,7 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-    background: var(--dark);
+    background: var(--black);
     user-select: none;
     z-index: -1;
 }
@@ -29,7 +29,7 @@ nav.navbar {
 #hero {
     min-height: 100vh;
     width: 100%;
-    background: linear-gradient(to top, #181818, #121212c0, transparent);
+    background: linear-gradient(to top, #000000, #00000085, transparent);
 }
 
 @keyframes scroll_1 {
@@ -59,8 +59,8 @@ nav.navbar {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 5px;
-    height: 8px;
+    top: 9px;
+    height: 7px;
     width: 4px;
     border-radius: .4em;
     overflow: hidden;
@@ -78,17 +78,280 @@ nav.navbar {
 .scroll-icon {
     display: block;
     position: relative;
-    height: 32px;
-    width: 20px;
+    height: 35px;
+    width: 23px;
     border: 2px solid var(--gray);
     border-radius: 1em;
 }
 
-/* about  */
-#about {
-    background: var(--dark);
+/* overview  */
+#overview {
+    min-height: 750px;
+    max-height: fit-content;
+    width: auto;
+    position: relative;
 }
 
-.about_image {
-    filter: drop-shadow(0px 2px 7px #BA3B068e);
+.overview_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #000;
+}
+
+.big_wrapper {
+    width: 100%;
+    max-width: 2400px;
+    height: 940px;
+    margin: auto;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 250px;
+    overflow: hidden;
+}
+
+.overview_slider {
+    position: absolute;
+    height: fit-content;
+    perspective: 2000px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    transform: translate3d(-300px, 0px, 0px) scale3d(1, 1, 1) rotateX(26deg) rotateY(25deg) rotateZ(-32deg) skew(8deg, 11deg);
+    transform-style: preserve-3d;
+}
+
+.overview_slider_block {
+    grid-column-gap: 24px;
+    perspective: 2000px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex
+}
+
+.overview_slides {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    transform: translateX(100%);
+}
+
+.overview_slide_item {
+    border-radius: 40px;
+    min-width: 480px;
+    height: 550px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.25s;
+}
+
+.overview_slide_item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.big_wrapper_right {
+    z-index: 1;
+    perspective: 2000px;
+    background-image: linear-gradient(270deg, #000, #0000);
+    width: 270px;
+    display: none;
+    position: absolute;
+    right: 0;
+    inset: 0% 0% 0% auto;
+}
+
+.big_wrapper_left {
+    z-index: 1;
+    background: linear-gradient(270deg, #01010100, #000);
+    width: 291px;
+    display: none;
+    position: absolute;
+    left: 0;
+    inset: 0% auto 0% 0%;
+}
+
+.overview_layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    z-index: 2;
+}
+
+/* about  */
+.aboutCard {
+    height: 100%;
+    width: auto;
+    border: 1px solid #dedede2f;
+    background: #00000083;
+    position: relative;
+    overflow: hidden;
+}
+
+.aboutCard::after {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -100px;
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    background: linear-gradient(180deg, #ffc107, var(--dark_secondary));
+    z-index: 0;
+    opacity: 0.1;
+    filter: blur(70px);
+}
+
+.aboutImg {
+    height: 200px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* portfolio  */
+
+.portfolio_card {
+    height: auto;
+    width: auto;
+    overflow: hidden;
+}
+
+.portfolio_image {
+    height: 520px;
+    width: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio_image img {
+    transform: translateY(0);
+    width: 100%;
+    filter: brightness(0.95);
+}
+
+.portfolio_content {
+    background: #00000085;
+    border: 1px solid #dedede23;
+}
+
+.arrow_icon {
+    height: 38px;
+    width: 38px;
+    background: var(--secondary);
+    color: var(--dark);
+    border-radius: 50%;
+    transition: 0.25s;
+    transform: rotate(45deg);
+}
+
+.portfolio_content:hover .arrow_icon {
+    background: var(--dark_secondary);
+    transform: rotate(0);
+}
+
+.portfolio_fade_right {
+    z-index: 3;
+    perspective: 2000px;
+    background-image: linear-gradient(270deg, #000, #0000);
+    width: 270px;
+    display: none;
+    position: absolute;
+    right: 0;
+    inset: 0% 0% 0% auto;
+}
+
+.portfolio_fade_left {
+    z-index: 3;
+    background: linear-gradient(270deg, #01010100, #000);
+    width: 291px;
+    display: none;
+    position: absolute;
+    left: 0;
+    inset: 0% auto 0% 0%;
+}
+
+@media (min-width: 2200px) {
+
+    .portfolio_fade_left,
+    .portfolio_fade_right {
+        display: block;
+    }
+
+}
+
+.portfolio_wrapper {
+    max-width: 2400px;
+    position: relative;
+    margin: auto;
+    overflow-x: hidden;
+}
+
+.portfolio_card_item {
+    min-width: 460px;
+}
+
+/* services  */
+.service_card {
+    height: auto;
+    width: auto;
+    background: #00000085;
+    border: 1px solid #dedede23;
+    overflow: hidden;
+}
+
+.services_img {
+    position: relative;
+}
+
+.services_img .faded_effect {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, #00000000, #00000000, #000000c7);
+    position: absolute;
+    top: 0
+}
+
+.services_content {
+    background: #000000c7;
+}
+
+/* contact  */
+#contactContainer {
+    height: auto;
+    width: auto;
+    background: url(assets/img/bg_shining.webp), #0c0c0c;
+    background-size: cover;
+}
+
+#contactContainer .badgeItem {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.contactInput {
+    padding: 1.5rem 1.25rem !important;
+    background: #1212128a !important;
+    border: 1px solid #1212128a !important;
+    color: var(--white) !important;
+}
+
+.contactInput::placeholder {
+    color: var(--light_em) !important;
 }

@@ -9,413 +9,566 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 
-    <style>
-        nav.navbar {
-            border-radius: 100px;
-        }
-
-        .scrollIndicator {
-            position: absolute;
-            bottom: 15px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1;
-        }
-
-        #hero {
-            min-height: 100vh;
-            width: 100%;
-            background: linear-gradient(to top, #181818, #121212c0, transparent);
-        }
-
-
-        #intro {
-            background: linear-gradient(0deg, var(--dark), #181818);
-        }
-
-        #introContent {
-            height: fit-content;
-            width: 100%;
-            background: url('assets/img/bg_shining.webp') center, linear-gradient(45deg, #bed18d, #D8E9A8);
-            background-size: cover;
-            background-blend-mode: color-dodge;
-        }
-
-    </style>
     
     <div id="content">
-        <section id="nav">
-            <div class="container-lg wrapper mt-2">
-                <nav class="navbar navbar-expand-lg">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="#">
-                            <img src="assets/img/web_logo.png" width="140" alt="heckto logo">
-                        </a>
-                        <div class="d-flex align-items-center gap-2 ms-auto">
-                            <button class="btn_secondary shiny_btn d-inline-flex align-items-center gap-1 arrow_right_top">
-                                <span class="fw-semibold">Contact us</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="20" width="20"><path d="M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M6,13H14L10.5,16.5L11.92,17.92L17.84,12L11.92,6.08L10.5,7.5L14,11H6V13Z" /></svg>
-                            </button>
-                            <button class="btn_dark_gray shiny_btn d-inline-flex align-items-center" data-bs-toggle="offcanvas" data-bs-target="#navbarMenu">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="25" width="25"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
-                            </button>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </section>
-
-        <header class="">
-            <canvas id="canvas"></canvas>
-            <section id="hero" class="position-relative z-1 text-center py-3 d-flex align-items-center justify-content-center">
-                <div class="container-lg wrapper">
-                    <h1 class="text_white display-4 fw-bolder overflow-hidden"><span class="d-inline-block">Transform,</span> <br> <span class="d-inline-block">Adapt &</span> <span class="d-inline-block">Innovate</span></h1>
-                    <p class="text_light_em fw-medium fs-5 mb-3 overflow-hidden">
-                        <span class="d-inline-block">Welcome to Heckto! Where AI meets adaptability in a rapidly evolving digital landscape.</span>
-                    </p>
-                    <div id="cta_link">
-                        <a href="#" class="btn_secondary_outline shiny_btn d-inline-flex align-items-center gap-1 arrow_right_top">
-                            <span class="fw-semibold">Begin Your Evolution</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="20" width="20"><path d="M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M6,13H14L10.5,16.5L11.92,17.92L17.84,12L11.92,6.08L10.5,7.5L14,11H6V13Z" /></svg>
-                        </a>    
-                    </div>
-                </div>
-            </section>
-            <div class="scrollIndicator">
-                <div class="scrollIndicatorCont">
-                    <span class="scroll-icon mx-auto">
-                        <span class="scroll-icon__wheel-outer">
-                            <span class="scroll-icon__wheel-inner"></span>
-                        </span>
-                    </span>
-                    <span class="d-block text_light_em fs_7 fw-medium mx-auto">Scroll to Explore</span>
-                </div>
-            </div>
-        </header>
-
-        <style>
-            #intro .intro_shade {
-                position: absolute;
-                bottom: -180px;
-                left: -70px;
-                height: 300px;
-                width: 300px;
-                border-radius: 100em;
-                filter: blur(120px);
-                z-index: 0;
-                background: linear-gradient(51deg, #72dd00, #d1e2a0, #c94d14);
-                opacity: 0.5;
-            }
-        </style>
-        <section id="intro" class="py-2 pb-5 position-relative">
-            <div class="container-lg wrapper position-relative z-1">
-                <div id="introContent" class="rounded-4 p-4">
-                    <div class="col-lg-9 col-md-11 col-12 my-2">
-                        <h2 class="text_dark fw-bold">We don't just respond to change—we anticipate it!</h2>
-                        <p class="text_dark_em fs_5 fw-medium">Heckto harnesses the power of artificial intelligence to create solutions that evolve with your business needs. Like our chameleon symbol, we blend seamlessly into your environment, delivering custom technology that adapts to your unique challenges.</p>
-                    </div>
-                    <div class="col-12 my-2 text-end">
-                        <button class="btn_secondary shiny_btn d-inline-flex align-items-center gap-1 arrow_right_top">
-                            <span class="fw-semibold">Learn more</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="20" width="20"><path d="M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M6,13H14L10.5,16.5L11.92,17.92L17.84,12L11.92,6.08L10.5,7.5L14,11H6V13Z"></path></svg>
-                        </button>
-                    </div>
-                </div>
-            </div>`
-            <div class="intro_shade"></div>
-        </section>
-
-        <section id="about" class="mt-5">
-            <div class="container-lg wrapper">
-                <div class="row align-items-end">
-                    <div class="col-lg-7 col-md-12 col-12 my-4 py-lg-4">
-                        <h2 class="text_light fs-1 fw-bold">About us</h2>
-                        <p class="text_light_em fs-5 fst-italic fw-medium mb-2">In the digital realm, we embody this same remarkable adaptability. Our team of global experts doesn't just build software; we craft intelligent solutions that respond to your business ecosystem, anticipate market shifts, and evolve alongside your organization.</p>
-                        <p class="text_light_em fs-5 fst-italic fw-medium">We begin by understanding your environment—the market conditions, competitive landscape, and unique challenges you face. Through powerful <span class="fw-semibold text_highlight">AI-driven analysis</span>, we identify opportunities for transformation. Then, like the chameleon, we adapt our solutions to perfectly fit your needs, ensuring you don't just survive in your industry—you thrive.</p>
-                        <button class="btn_secondary shiny_btn d-inline-flex align-items-center gap-1 arrow_right_top mt-2 mb-3">
-                            <span class="fw-semibold">Get started</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="20" width="20"><path d="M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M6,13H14L10.5,16.5L11.92,17.92L17.84,12L11.92,6.08L10.5,7.5L14,11H6V13Z"></path></svg>
-                        </button>
-                    </div>
-                    <div class="col-lg-5 col-md-12 col-12 mt-3">
-                        <img src="assets/img/heckto_chameleon.png" class="about_image" width="100%" alt="">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <style>
-            #aboutVideo {
-                min-height: 100vh;
-                padding: 2rem 0;
-                position: relative;
-                overflow: hidden;
-            }
-
-            #aboutVideo img {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                object-fit: cover;
-                height: 100%;
-                width: 100%;
-                filter: brightness(0.5);
-            }
-
-            #playVideo {
-                height: 56px;
-                width: 56px;
-                background: var(--light_em);
-                color: var(--dark);
-                fill: var(--dark);
-                border-radius: 100rem;
-                border: none;
-                outline: none;
-                box-shadow: 0px 0px 10px 2px #00000054;
-                transform: scale(1);
-                transition: transform 0.25s;
-            }
-            
-            #playVideo:hover {
-                transform: scale(1.1);
-                box-shadow: 0px 0px 12px 2px #00000051;
-            }
-
-            .videoPopupContainer {
-                padding-top: 51.25%;
-                width: 100%;
-                position: relative;
-            }
-
-            .videoPopupContainer video {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-            }
-        </style>
-        <section id="aboutVideo" class="d-flex align-items-center justify-content-center">
-            <img src="assets/img/about_poster.png" alt="">
-            <div class="container-lg wrapper position-relative z-1 text-center">
-                <button id="playVideo" class="shiny_btn d-inline-flex align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#videoPopup">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="28" width="28"><path d="M8,5.14V19.14L19,12.14L8,5.14Z" /></svg>
-                </button>
-            </div>
-        </section>
-
-        <style>
-            #services .intro_shade {
-                position: absolute;
-                top: -100px;
-                right: -50px;
-                height: 320px;
-                width: 320px;
-                border-radius: 100em;
-                filter: blur(120px);
-                z-index: -1;
-                background: linear-gradient(51deg, #72dd00, #d1e2a0, #c94d14);
-                opacity: 0.5;
-            }
-
-            .heading_line {
-                height: 5px;
-                width: 160px;
-                border-radius: 2em;
-
-            }
-
-            .services_card {
-                position: relative;
-                height: 500px;
-                width: auto;
-                overflow: hidden;
-            }
-
-            .services_card img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-            }
-            .services_content {
-                height: 100%;
-                width: 100%;
-                background: linear-gradient(180deg, transparent, #0000007b, #000000b7);
-                position: relative;
-                z-index: 1;
-            }
-        </style>
-        <section id="services" class="my-5 py-4 position-relative">
-            <div class="container-lg wrapper">
-                <div class="d-flex align-items-center justify-content-between flex-wrap mb-3">
-                    <h2 class="text_light display-6 fw-bolder my-2"><span class="text_highlight">Digital Evolution</span><br> through Intelligent Adaptation</h2>
-                    <button class="btn_light_outline d-inline-flex align-items-center gap-1 ms-auto my-2">
-                        <span class="fw-medium">View all services</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="20" width="20"><path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z" /></svg>
-                    </button>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-12 my-3">
-                        <div class="services_card rounded-3 shadow">
-                            <img src="assets/img/ai_automation.jpg" alt="">
-                            <div class="services_content p-md-4 p-3 py-4 d-flex align-items-end">
-                                <div class="mb-1">
-                                    <p class="text_highlight m-0 fw-semibold">Automate, Optimize & Revolutionize</p>
-                                    <h3 class="text_white fw-bold">AI Automation Creation</h3>
-                                    <p class="text_light fs_6 fw-medium m-0">Lorem ipsum dolor sit amet dolor sit amet consectetur adipisicing elit. Harum adipisci magni sequi fuga accusamus ex.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-12 my-3">
-                        <div class="services_card rounded-3 shadow">
-                            <img src="assets/img/website_development.jpg" alt="">
-                            <div class="services_content p-md-4 p-3 py-4 d-flex align-items-end">
-                                <div class="mb-1">
-                                    <p class="text_highlight m-0 fw-semibold">Websites that work as hard as you do</p>
-                                    <h3 class="text_white fw-bold">Website Development</h3>
-                                    <p class="text_light fs_6 fw-medium m-0">Lorem ipsum dolor sit amet dolor sit amet consectetur adipisicing elit. Harum adipisci magni sequi fuga accusamus ex.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-12 my-3">
-                        <div class="services_card rounded-3 shadow">
-                            <img src="assets/img/ai_automation.jpg" alt="">
-                            <div class="services_content p-md-4 p-3 py-4 d-flex align-items-end">
-                                <div class="mb-1">
-                                    <p class="text_highlight m-0 fw-semibold">Strategic Digital Engagement</p>
-                                    <h3 class="text_white fw-bold">Social Media Marketing</h3>
-                                    <p class="text_light fs_6 fw-medium m-0">Lorem ipsum dolor sit amet dolor sit amet consectetur adipisicing elit. Harum adipisci magni sequi fuga accusamus ex.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="intro_shade"></div>
-        </section>
-
-        <!-- modal -->
-        <div class="modal fade" id="videoPopup" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="videoPopupLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-xl">
-                <div class="modal-content p-0 bg-transparent border-0 rounded-3 overflow-hidden">
-                    <button type="button" id="stopVideo" class="btn_transparent shadow-none d-inline-flex align-items-center justify-content-center position-absolute top-0 end-0 m-1 z-1" data-bs-dismiss="modal" aria-label="Close">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="22" width="22"><path d="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z" /></svg>
-                    </button>
-                    <div class="videoPopupContainer">
-                        <video src="assets/img/hackto_about.mp4" controls="true"></video>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-
-    </div>
-
-    <div class="offcanvas offcanvas-top bg_dark overflow-y-auto pb-4" data-bs-scroll="false" data-bs-backdrop="static" tabindex="-1" id="navbarMenu" aria-labelledby="navbarMenuLabel">
-        <img src="assets/img/heckto_icon.png" class="bg_icon" width="420" alt="">
-        <div class="container-lg wrapper mt-2 position-relative z-1">
-            <div class="offcanvas-header">
-                <a class="navbar-brand" href="#">
-                    <img src="assets/img/web_logo.png" width="140" alt="heckto logo">
-                </a>
-                <div class="d-flex align-items-center gap-2 ms-auto">
-                    <button class="btn_secondary shiny_btn d-inline-flex align-items-center gap-1 arrow_right_top">
-                        <span class="fw-semibold">Contact us</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="20" width="20"><path d="M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M6,13H14L10.5,16.5L11.92,17.92L17.84,12L11.92,6.08L10.5,7.5L14,11H6V13Z" /></svg>
-                    </button>
-                    <button class="btn_dark_gray ms-auto shiny_btn d-inline-flex align-items-center" data-bs-dismiss="offcanvas" aria-label="Close" type="button">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24"><path d="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z" /></svg>
-                    </button>
-                </div>
-            </div>
-            <div class="offcanvas-body">
-                <div class="row m-0 mt-md-2">
-                    <div class="col-md-7 col-12">
-                        <ul class="list-unstyled">
-                            <li class="navbar_item mb-4">
-                                <a href="#" class="navbar_link fw-bold fs-3">Home</a>
-                            </li>
-                            <li class="navbar_item mb-4">
-                                <a href="#" class="navbar_link fw-bold fs-3">Expertise</a>
-                            </li>
-                            <li class="navbar_item mb-4">
-                                <a href="#" class="navbar_link fw-bold fs-3">About</a>
-                            </li>
-                            <li class="navbar_item mb-4">
-                                <a href="#" class="navbar_link fw-bold fs-3">Portfolio</a>
-                            </li>
-                            <li class="navbar_item mb-4">
-                                <a href="#" class="navbar_link fw-bold fs-3">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-5 col-12 d-flex align-items-end">
-                        <div class="mb-4">
-                            <h3 class="text_light fw-bold mb-2">Need Assistance?</h3>
-                            <p class="text_light_em fw-medium">Our team is here to help you. Get in touch with us</p>
-                            <div class="d-flex align-items-center gap-2">
-                                <button class="btn_dark_gray shiny_btn d-inline-flex align-items-center gap-1 arrow_right_top">
-                                    <span class="fw-semibold">Email us</span>
+        <div class="gradient_cursor"></div>
+        <section id="header">
+            <section id="nav">
+                <div class="container-lg wrapper mt-2 pageContent">
+                    <nav class="navbar navbar-expand-lg">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="#">
+                                <img src="assets/img/heckto_icon.png" class="d-sm-none d-block" width="70" alt="heckto logo">
+                                <img src="assets/img/web_logo.png" class="d-sm-block d-none" width="140" alt="heckto logo">
+                            </a>
+                            <div class="d-flex align-items-center gap-2 ms-auto">
+                                <button class="btn_secondary shiny_btn d-inline-flex align-items-center gap-1 arrow_right_top">
+                                    <span class="fw-semibold">Contact us</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="20" width="20"><path d="M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M6,13H14L10.5,16.5L11.92,17.92L17.84,12L11.92,6.08L10.5,7.5L14,11H6V13Z" /></svg>
                                 </button>
-                                <a href="#" class="link_light_hover fw-semibold d-inline-flex align-items-center text-decoration-none">
-                                    <span>+44 321 4567890</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="20" width="20"><path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z" /></svg>
+                                <button class="btn_dark_gray shiny_btn d-inline-flex align-items-center" id="openNav">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="25" width="25"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </section>
+    
+            <header>
+                <canvas id="canvas"></canvas>
+                <section id="hero" class="position-relative text-center py-3 d-flex align-items-center justify-content-center">
+                    <div class="container-lg wrapper content_container pageContent">
+                        <h1 class="text_white display-3 fw-bolder overflow-hidden"><span class="d-inline-block">Transform,</span> <br> <span class="d-inline-block">Adapt &</span> <span class="d-inline-block">Innovate</span></h1>
+                        <p class="text_light_em fs-5 mb-3 overflow-hidden">
+                            <span class="d-inline-block">Welcome to Heckto! Where AI meets adaptability in a rapidly evolving digital landscape.</span>
+                        </p>
+                        <div id="cta_link">
+                            <a href="#" class="btn_secondary_outline shiny_btn d-inline-flex align-items-center gap-1 arrow_right_top ">
+                                <span class="fw-semibold">Begin Your Evolution</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="20" width="20"><path d="M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M6,13H14L10.5,16.5L11.92,17.92L17.84,12L11.92,6.08L10.5,7.5L14,11H6V13Z" /></svg>
+                            </a>    
+                        </div>
+                    </div>
+                </section>
+            </header>
+        </section>
+
+        <section id="overview">
+            <div class="big_wrapper position-absolute">
+                <div class="overview_slider">
+                    <div class="overview_slider_block">
+                        <div class="overview_slides">
+                            <div class="overview_slide_item">
+                                <img src="assets/img/tutorselevenplus.jpg" alt="">
+                            </div>
+                            <div class="overview_slide_item">
+                                <img src="assets/img/oneli_builders.jpg" alt="">
+                            </div>
+                            <div class="overview_slide_item">
+                                <img src="assets/img/trolleymate.jpg" alt="">
+                            </div>
+                            <div class="overview_slide_item">
+                                <img src="assets/img/interstateX.jpg" alt="">
+                            </div>
+                            <div class="overview_slide_item">
+                                <img src="assets/img/tutorselevenplus.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="overview_slides">
+                            <div class="overview_slide_item">
+                                <img src="assets/img/oneli_builders.jpg" alt="">
+                            </div>
+                            <div class="overview_slide_item">
+                                <img src="assets/img/trolleymate.jpg" alt="">
+                            </div>
+                            <div class="overview_slide_item">
+                                <img src="assets/img/interstateX.jpg" alt="">
+                            </div>
+                            <div class="overview_slide_item">
+                                <img src="assets/img/tutorselevenplus.jpg" alt="">
+                            </div>
+                            <div class="overview_slide_item">
+                                <img src="assets/img/oneli_builders.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="overview_slides">
+                            <div class="overview_slide_item">
+                                <img src="assets/img/trolleymate.jpg" alt="">
+                            </div>
+                            <div class="overview_slide_item">
+                                <img src="assets/img/interstateX.jpg" alt="">
+                            </div>
+                            <div class="overview_slide_item">
+                                <img src="assets/img/tutorselevenplus.jpg" alt="">
+                            </div>
+                            <div class="overview_slide_item">
+                                <img src="assets/img/oneli_builders.jpg" alt="">
+                            </div>
+                            <div class="overview_slide_item">
+                                <img src="assets/img/trolleymate.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="big_wrapper_left"></div>
+                <div class="big_wrapper_right"></div>
+            </div>
+            <div class="overview_layer"></div>
+        </section>
+
+        <section id="about" class="my-5 pb-lg-5 pb-4 ">
+            <div class="container-lg wrapper pageContent position-relative">
+                <h2 class="text_white display-2 sectionHeading fw-bold overflow-hidden"><span class="text_secondary_gradient heading_one d-inline-block">A team of Super experts,</span> <br> <span class="text_light_gradient heading_two d-inline-block">We don't just respond to change—we anticipate it</span></h2>
+                <div class="row my-4 aboutCardCont">
+                    <div class="col-lg-4 col-md-6 col-12 my-3">
+                        <div class="aboutCard rounded-4 p-m-4 p-3 py-4">
+                            <div class="position-relative z-1">
+                                <div class="aboutImg">
+                                    <img src="assets/img/think_icon.png" class="mb-3" width="60" height="60" alt="">
+                                </div>
+                                <h3 class="text-white fs-4 mb-1">Think</h3>
+                                <p class="text_light_em fw-normal fs_5">We start by conceptualizing your project with a clear vision. Every idea is crafted carefully to meet your needs and goals.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 my-3">
+                        <div class="aboutCard rounded-4 p-m-4 p-3 py-4">
+                            <div class="position-relative z-1">
+                                <div class="aboutImg">
+                                    <img src="assets/img/design.png" class="mb-3" width="60" height="60" alt="">
+                                </div>
+                                <h3 class="text-white fs-4 mb-1">Create</h3>
+                                <p class="text_light_em fw-normal fs_5">We bring that vision to life, transforming ideas into reality. Our creative process ensures that every detail aligns with your objectives.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 my-3">
+                        <div class="aboutCard rounded-4 p-m-4 p-3 py-4">
+                            <div class="position-relative z-1">
+                                <div class="aboutImg">
+                                    <img src="assets/img/develop.png" class="mb-3" width="60" height="60" alt="">
+                                </div>
+                                <h3 class="text-white fs-4 mb-1">Deliver</h3>
+                                <p class="text_light_em fw-normal fs_5">With everything in place, we’re ready to deliver your project. We ensure timely, high-quality execution so you can see your vision in action.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="my-5">
+            <div class="container-lg wrapper pageContent position-relative">
+                <div class="title_badge mb-3">
+                    <span class="title_dot"></span>
+                    <span class="text_light">Portfolio</span>
+                </div>
+                <h2 class="text_light_gradient sectionHeading display-2 fw-bold">At Heckto - We craft narratives that drives success</h2>
+            </div>
+            <div class="portfolio_section my-2 pageContent">
+                <div class="portfolio_wrapper">
+                    <div class="container-lg wrapper pageContent position-relative">
+                        <div class="portfolioCardsContainer d-flex gap-4 my-4">
+                            <div class="portfolio_card_item my-3">
+                                <div class="portfolio_card rounded-4">
+                                    <div class="portfolio_image">
+                                        <img src="assets/img/earthbound_app.png" width="469" height="1620" alt="earthbound designs UI design">
+                                    </div>
+                                    <a href="https://www.earthbounddesigns.com/" target="_blank" class="portfolio_content d-block text-decoration-none rounded-bottom-4 p-3 py-4">
+                                        <h3 class="link_secondary_hover fs-4 fw-semibold">Earthbound Designs</h3>
+                                        <div class="text-end">
+                                            <span class="arrow_icon shiny_btn d-inline-flex align-items-center justify-content-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="28" width="28"><path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z" /></svg>                                    
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="portfolio_card_item my-3">
+                                <div class="portfolio_card rounded-4">
+                                    <div class="portfolio_image">
+                                        <img src="assets/img/kfs3_app.png" width="460" height="1464" alt="KFS 3.0 ui design">
+                                    </div>
+                                    <a href="https://kfs3.netlify.app/" target="_blank" class="portfolio_content d-block text-decoration-none rounded-bottom-4 p-3 py-4">
+                                        <h3 class="link_secondary_hover fs-4 fw-semibold">KFS 3.0 Consultancies</h3>
+                                        <div class="text-end">
+                                            <span class="arrow_icon shiny_btn d-inline-flex align-items-center justify-content-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="28" width="28"><path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z" /></svg>                                    
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="portfolio_card_item my-3">
+                                <div class="portfolio_card rounded-4">
+                                    <div class="portfolio_image">
+                                        <img src="assets/img/captrax_app.png" width="469" height="1875" alt="captrax UI design">
+                                    </div>
+                                    <a href="https://www.cap-trax.com/" target="_blank" class="portfolio_content d-block text-decoration-none rounded-bottom-4 p-3 py-4">
+                                        <h3 class="link_secondary_hover fs-4 fw-semibold">Captrax</h3>
+                                        <div class="text-end">
+                                            <span class="arrow_icon shiny_btn d-inline-flex align-items-center justify-content-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="28" width="28"><path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z" /></svg>                                    
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="portfolio_card_item my-3">
+                                <div class="portfolio_card rounded-4">
+                                    <div class="portfolio_image">
+                                        <img src="assets/img/sophieratner_app.png" width="469" height="1714" alt="Sophie Ratner Ui Design">
+                                    </div>
+                                    <a href="https://www.sophieratner.com/" target="_blank" class="portfolio_content d-block text-decoration-none rounded-bottom-4 p-3 py-4">
+                                        <h3 class="link_secondary_hover fs-4 fw-semibold">Sophie Ratner</h3>
+                                        <div class="text-end">
+                                            <span class="arrow_icon shiny_btn d-inline-flex align-items-center justify-content-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="28" width="28"><path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z" /></svg>                                    
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="portfolio_card_item my-3">
+                                <div class="portfolio_card rounded-4">
+                                    <div class="portfolio_image">
+                                        <img src="assets/img/interstateX_webpage.jpg" width="469" height="1747" alt="interstate X ui design">
+                                    </div>
+                                    <a href="https://interstatex.com/" target="_blank" class="portfolio_content d-block text-decoration-none rounded-bottom-4 p-3 py-4">
+                                        <h3 class="link_secondary_hover fs-4 fw-semibold">InterstateX Logistics</h3>
+                                        <div class="text-end">
+                                            <span class="arrow_icon shiny_btn d-inline-flex align-items-center justify-content-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="28" width="28"><path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z" /></svg>                                    
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="portfolio_card_item my-3">
+                                <div class="portfolio_card rounded-4">
+                                    <div class="portfolio_image">
+                                        <img src="assets/img/tutorselevenplus_app.png" width="469" height="2528" alt="tutorselevenplus academy ui design">
+                                    </div>
+                                    <a href="https://www.tutorselevenplus.co.uk/" target="_blank" class="portfolio_content d-block text-decoration-none rounded-bottom-4 p-3 py-4">
+                                        <h3 class="link_secondary_hover fs-4 fw-semibold">TutorsElevenPlus e-Academy</h3>
+                                        <div class="text-end">
+                                            <span class="arrow_icon shiny_btn d-inline-flex align-items-center justify-content-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="28" width="28"><path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z" /></svg>                                    
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="portfolio_card_item my-3">
+                                <div class="portfolio_card rounded-4">
+                                    <div class="portfolio_image">
+                                        <img src="assets/img/alpenmedika_app.png" width="469" height="1586" alt="Alpen Medika UI design">
+                                    </div>
+                                    <a href="https://aplen-medika.netlify.app/" target="_blank" class="portfolio_content d-block text-decoration-none rounded-bottom-4 p-3 py-4">
+                                        <h3 class="link_secondary_hover fs-4 fw-semibold">Alpen Medika</h3>
+                                        <div class="text-end">
+                                            <span class="arrow_icon shiny_btn d-inline-flex align-items-center justify-content-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="28" width="28"><path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z" /></svg>                                    
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio_fade_right"></div>
+                    <div class="portfolio_fade_left"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services_head" class="my-5">
+            <div class="container-lg wrapper pageContent position-relative">
+                <div class="title_badge mb-3">
+                    <span class="title_dot"></span>
+                    <span class="text_light">Services</span>
+                </div>
+                <h2 class="display-2 fw-bold sectionHeading overflow-hidden"><span class="d-inline-block text_light_gradient">Digital Evolution Through Intelligent Adaptation</span></h2>
+                <div class="row servicesCardCont">
+                    <div class="col-lg-6 col-md-6 col-12 my-3">
+                        <div class="service_card rounded-4">
+                            <div class="services_img">
+                                <img src="assets/img/ai_automation.png" width="100%" alt="">
+                                <div class="faded_effect"></div>
+                            </div>
+                            <div class="services_content p-md-4 p-3 py-4">
+                                <h3 class="text_white fs-4">AI Automation</h3>
+                                <p class="text_light_em">Automate your workflows and boost efficiency with smart AI-driven solutions tailored to your business needs.</p>
+                                <a href="#" class="link_secondary_hover mb-2 text_light fw-medium text-decoration-none d-inline-flex align-items-center gap-1">
+                                    <span>Learn more</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12 my-3">
+                        <div class="service_card rounded-4">
+                            <div class="services_img">
+                                <img src="assets/img/crypto_blockchain.png" width="100%" alt="">
+                                <div class="faded_effect"></div>
+                            </div>
+                            <div class="services_content p-md-4 p-3 py-4">
+                                <h3 class="text_white fs-4">Crypto Blockchains</h3>
+                                <p class="text_light_em">Build secure, scalable blockchain applications and explore innovative crypto integrations for the future of digital trust.</p>
+                                <a href="#" class="link_secondary_hover mb-2 text_light fw-medium text-decoration-none d-inline-flex align-items-center gap-1">
+                                    <span>Learn more</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row servicesCardCont_1">
+                    <div class="col-lg-6 col-md-6 col-12 my-3 order-lg-1 order-2">
+                        <div class="service_card rounded-4">
+                            <div class="services_img">
+                                <img src="assets/img/website_development.png" width="100%" alt="">
+                                <div class="faded_effect"></div>
+                            </div>
+                            <div class="services_content p-md-4 p-3 py-4">
+                                <h3 class="text_white fs-4">Website Development</h3>
+                                <p class="text_light_em">From concept to code, we design and develop responsive, modern websites that perform across all devices.</p>
+                                <a href="#" class="link_secondary_hover mb-2 text_light fw-medium text-decoration-none d-inline-flex align-items-center gap-1">
+                                    <span>Learn more</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12 my-3 order-lg-2 order-1">
+                        <div class="service_card rounded-4">
+                            <div class="services_img">
+                                <img src="assets/img/app_development.png" width="100%" alt="">
+                                <div class="faded_effect"></div>
+                            </div>
+                            <div class="services_content p-md-4 p-3 py-4">
+                                <h3 class="text_white fs-4">Mobile Apps Development</h3>
+                                <p class="text_light_em">We create intuitive mobile apps that connect with your users and elevate your brand — on iOS and Android.</p>
+                                <a href="#" class="link_secondary_hover mb-2 text_light fw-medium text-decoration-none d-inline-flex align-items-center gap-1">
+                                    <span>Learn more</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row servicesCardCont_2">
+                    <div class="col-lg-6 col-md-6 col-12 my-3">
+                        <div class="service_card rounded-4">
+                            <div class="services_img">
+                                <img src="assets/img/social_media_marketing.png" width="100%" alt="">
+                                <div class="faded_effect"></div>
+                            </div>
+                            <div class="services_content p-md-4 p-3 py-4">
+                                <h3 class="text_white fs-4">Social Media Marketing</h3>
+                                <p class="text_light_em">Engage the right audience with powerful campaigns, strategic content, and data-driven social media growth.</p>
+                                <a href="#" class="link_secondary_hover mb-2 text_light fw-medium text-decoration-none d-inline-flex align-items-center gap-1">
+                                    <span>Learn more</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12 my-3">
+                        <div class="service_card rounded-4">
+                            <div class="services_img">
+                                <img src="assets/img/video_production.png" width="100%" alt="">
+                                <div class="faded_effect"></div>
+                            </div>
+                            <div class="services_content p-md-4 p-3 py-4">
+                                <h3 class="text_white fs-4">Video Production</h3>
+                                <p class="text_light_em">Bring your ideas to life with high-impact visuals, animations, and storytelling that captures attention.</p>
+                                <a href="#" class="link_secondary_hover mb-2 text_light fw-medium text-decoration-none d-inline-flex align-items-center gap-1">
+                                    <span>Learn more</span>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+
+        </section>
+
+        <section id="contact" class="my-5 py-5">
+            <div class="container wrapper pageContent position-relative">
+                <div class="title_badge mb-3">
+                    <span class="title_dot"></span>
+                    <span class="text_light">Contact</span>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-12 my-3">
+                        <h2 class="display-2 sectionHeading fw-bold"><span class="text_secondary_gradient">Ready for the Heckto effect?</span> <span class="text_light_gradient">Get in touch with us</span></h2>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12 my-3">
+                        <form class="formSection" action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="access_key" value="ba20c24d-3256-460c-97da-584a42513edc">
+                            <div class="mb-4 formItem">
+                                <input type="text" class="form-control shadow-none fw-light fs_5 contactInput" id="name" name="name" placeholder="Name" autocomplete="off">
+                            </div>
+                            <div class="mb-4 formItem">
+                                <input type="email" class="form-control shadow-none fw-light fs_5 contactInput" id="email" name="email" placeholder="Email Address" autocomplete="off">
+                            </div>
+                            <div class="mb-4 formItem">
+                                <textarea name="message" id="message" rows="5" class="form-control shadow-none fw-light fs_5 contactInput" placeholder="Message"></textarea>
+                            </div>
+                            <div class="mb-4 formItem">
+                                <button type="submit" class="btn_secondary_outline w-100 d-flex align-items-center fs_5 fw-medium justify-content-center py-3 rounded">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="top_nav" class="navbarMenu overflow-y-hidden overflow-x-hidden">
+            <img src="assets/img/heckto_icon.png" class="bg_icon" width="420" alt="">
+            <div class="container-lg wrapper mt-2 position-relative z-1 top_nav_container">
+                <div class="top_nav_header overflow-hidden d-flex align-items-center justify-content-between p-3 mb-4">
+                    <a class="navbar-brand" href="#">
+                        <img src="assets/img/heckto_icon.png" class="d-sm-none d-block" width="70" alt="heckto logo">
+                        <img src="assets/img/web_logo.png" class="d-sm-block d-none" width="140" alt="heckto logo">
+                    </a>
+                    <div class="d-flex align-items-center gap-2 ms-auto">
+                        <div class="top_nav_cta">
+                            <button class="btn_secondary  shiny_btn d-inline-flex align-items-center gap-1 arrow_right_top">
+                                <span class="fw-semibold">Contact us</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="20" width="20"><path d="M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M6,13H14L10.5,16.5L11.92,17.92L17.84,12L11.92,6.08L10.5,7.5L14,11H6V13Z" /></svg>
+                            </button>
+                        </div>
+                        <div class="top_nav_cta">
+                            <button class="btn_dark_gray ms-auto shiny_btn d-inline-flex align-items-center" id="closeNav" type="button">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24"><path d="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z" /></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-5 px-1">
+                    <div class="row m-0 mt-md-2">
+                        <div class="col-md-7 col-12">
+                            <ul class="list-unstyled">
+                                <li class="navbar_item mb-4">
+                                    <a href="#" class="navbar_link fw-bold fs-3">Home</a>
+                                </li>
+                                <li class="navbar_item mb-4">
+                                    <a href="#" class="navbar_link fw-bold fs-3">Expertise</a>
+                                </li>
+                                <li class="navbar_item mb-4">
+                                    <a href="#" class="navbar_link fw-bold fs-3">About</a>
+                                </li>
+                                <li class="navbar_item mb-4">
+                                    <a href="#" class="navbar_link fw-bold fs-3">Portfolio</a>
+                                </li>
+                                <li class="navbar_item mb-4">
+                                    <a href="#" class="navbar_link fw-bold fs-3">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-5 col-12 d-flex align-items-end">
+                            <div class="mt-2 mb-4 top_nav_contact">
+                                <h3 class="text_light fw-bold mb-2 text_content overflow-hidden">Need Assistance?</h3>
+                                <p class="text_light_em fw-medium text_content overflow-hidden  ">Our team is here to help you. Get in touch with us</p>
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="top_nav_contact_btns">
+                                        <button class="btn_dark_gray shiny_btn d-inline-flex align-items-center gap-1 arrow_right_top">
+                                            <span class="fw-semibold">Email us</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="20" width="20"><path d="M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12M6,13H14L10.5,16.5L11.92,17.92L17.84,12L11.92,6.08L10.5,7.5L14,11H6V13Z" /></svg>
+                                        </button>
+                                    </div>
+                                    <div class="top_nav_contact_btns">
+                                        <a href="#" class="link_light_hover fw-semibold d-inline-flex align-items-center text-decoration-none">
+                                            <span>+44 321 4567890</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="20" width="20"><path d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z" /></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer" class="p-md-3 p-2 py-3 py-md-4">
+            <div class="container-lg wrapper position-relative pageContent h-100">
+                <div class="d-flex justify-content-between flex-column h-100">
+                    <div class="my-3 d-flex align-items-start justify-content-between">
+                        <div>
+                            <h2 class="footer_heading overflow-hidden fw-medium"><span class="d-inline-block">H</span><span class="d-inline-block">e</span><span class="d-inline-block">c</span><span class="d-inline-block">k</span><span class="d-inline-block">t</span><span class="d-inline-block">o</span></h2>
+                        </div>
+                        <div id="scrollBtnCont">
+                            <button class="btn_dark shiny_btn d-inline-flex align-items-center justify-content-center" id="scrollToTop">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="22" width="22"><path d="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z" /></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="row">
+                            <div class="contactSection col-lg-8 col-md-7 col-12 my-3">
+                                <p class="contactSecItem fw-semibold mb-2 text_dark">Get in touch</p>
+                                <div class="contactSecItem mb-2">
+                                    <a href="#" class="fs_4 d-inline-flex fw-medium text_dark text-decoration-none footer_link">+44 321 4567890</a>
+                                </div>
+                                <div class="contactSecItem mb-4">
+                                    <a href="#" class="fs_4 d-inline-flex fw-medium text_dark text-decoration-none footer_link">hello@heckto.com</a>
+                                </div>
+                            </div>
+                            <div class="subscribeSection col-lg-4 col-md-5 col-12 my-3">
+                                <p class="subscribeSecItem fw-semibold mb-2 text_dark">Subscribe to newsletter</p>
+                                <div class="subscribeSecItem my-2 position-relative">
+                                    <input type="email" name="subscribeInput" class="footer_input fs-5 rounded-0 form-control shadow-none text_dark fw-normal" id="subscribeInput" placeholder="Your email" autocomplete="off">
+                                    <button id="subscribe_btn" class="btn_dark shiny_btn d-inline-flex">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="20" width="20"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
+                                    </button>
+                                    <button type="submit" id="submitEmailForm" class="d-none visually-hidden">Submit</button>
+                                </div>
+                                <p class="text-danger m-0 d-none" id="subscribeInputErr">Invalid email address</p>
+                                <div class="footerSocialCont d-flex align-items-center gap-2 flex-wrap my-3">
+                                    <div class="d-inline-block footerSocialItems">
+                                        <a href="#" target="_blank" class="d-inline-flex align-items-center justify-content-center footerSocialLink">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="28" width="28"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z" /></svg>
+                                        </a>
+                                    </div>
+                                    <div class="d-inline-block footerSocialItems">
+                                        <a href="#" target="_blank" class="d-inline-flex align-items-center justify-content-center footerSocialLink">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="28" width="28"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" /></svg>
+                                        </a>
+                                    </div>
+                                    <div class="d-inline-block footerSocialItems">
+                                        <a href="#" target="_blank" class="d-inline-flex align-items-center justify-content-center footerSocialLink">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="28" width="28"><path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" /></svg>
+                                        </a>
+                                    </div>
+                                    <div class="d-inline-block footerSocialItems">
+                                        <a href="#" target="_blank" class="d-inline-flex align-items-center justify-content-center footerSocialLink">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="28" width="28"><path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z" /></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <p class="text-center copyrightText text_dark text-center mb-1">Copyright &copy; 2025. All rights reserved</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js" integrity="sha512-f6bQMg6nkSRw/xfHw5BCbISe/dJjXrVGfz9BSDwhZtiErHwk7ifbmBEtF9vFW8UNIQPhV2uEFVyI/UHob9r7Cw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js" integrity="sha512-AcqPGqrrAEtEwe+ADO5R8RbdFi7tuU7b/A2cJJH0Im0D18NRk5p5s4B3E5PMuO81KFw0ClN7J5SHVUJz7KOb0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
     <script src="canvas.js"></script>
+    <script src="assets/js/app.js"></script>
     <script src="assets/js/gsap.js"></script>
-    <script>
-        $(window).on('load scroll', function () {
-            const scrolled = $(window).scrollTop();
-            if (scrolled > 25) {
-                $(".scrollIndicator").fadeOut()
-            } else {
-                $(".scrollIndicator").fadeIn()
-            }
-        })
-
-        $("#playVideo").on('click', function () {
-            const video = $(".videoPopupContainer video")[0];
-            if (video.paused) {
-                video.play();
-            } 
-        });
-        
-        $("#stopVideo").on('click', function () {
-            const video = $(".videoPopupContainer video")[0];
-            if (video.play) {
-                video.pause();
-            } 
-        })
-
-    </script>
 </body>
 
 </html>
