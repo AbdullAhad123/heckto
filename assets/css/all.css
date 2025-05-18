@@ -374,8 +374,8 @@ select:-webkit-autofill:focus {
 
 .btn_dark:hover {
     background: var(--black) !important;
-    color: var(--white) !important;
-    fill: var(--white) !important;
+    color: #fff !important;
+    fill: #fff !important;
 }
 
 .btn_transparent {

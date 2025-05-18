@@ -12,18 +12,21 @@ $(window).on('load resize', function () {
     }
 });
 
-var cardWidth = $(".portfolio_card").width();
-var transformSize = cardWidth * 5.5;
-gsap.to(".portfolio_section .portfolioCardsContainer", {
-    duration: 6,
-    x: `-${transformSize}px`,
-    scrollTrigger: {
-        trigger: ".portfolio_section",
-        pin: true,
-        scrub: 3,
-        markers: true
-    }
+$(window).on('load', function () {
+    var cardWidth = $(".portfolio_card").outerWidth(true); // better for spacing
+    var transformSize = cardWidth * 5.5;
+
+    gsap.to(".portfolio_section .portfolioCardsContainer", {
+        duration: 6,
+        x: `-${transformSize}px`,
+        scrollTrigger: {
+            trigger: ".portfolio_section",
+            pin: true,
+            scrub: 3,
+        }
+    });
 });
+
 
 $("#scrollToTop").click(function () {
     $(window).scrollTop(0)
