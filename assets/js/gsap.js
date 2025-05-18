@@ -84,6 +84,7 @@ footer.addEventListener("mouseleave", function () {
 var nav_tl = gsap.timeline();
 var openNav = document.querySelector("#openNav");
 var closeNav = document.querySelector("#closeNav");
+var navbarItems = document.querySelectorAll(".navbar_link");
 
 
 openNav.addEventListener("click", function () {
@@ -154,6 +155,14 @@ closeNav.addEventListener("click", function () {
         ease: "power4.out",
     })
 });
+
+
+navbarItems.forEach(function (item) {
+    item.addEventListener('click', function () {
+        closeNav.click();
+    });
+});
+
 
 
 
@@ -240,12 +249,51 @@ heading_tl.from("#about .sectionHeading span", {
     ease: "power3.out" // animation ko smooth banata hai
 });
 
-heading_tl.from(".aboutCardCont .col-12",{
+heading_tl.from(".aboutCardCont .col-12", {
     opacity: 0,
     y: 50,
     stagger: 0.2,
     duration: 0.8
 })
+
+gsap.timeline({
+    scrollTrigger: {
+        trigger: "#callToAction",
+        start: "top 25%",
+        end: "bottom 33%",
+
+        onEnter: () => {
+            onEnterStying();
+        },
+
+        onLeave: () => {
+            onLeaveStying();
+        },
+
+        onEnterBack: () => {
+            onEnterStying();
+        },
+
+        onLeaveBack: () => {
+            onLeaveStying();
+        }
+    }
+});
+
+function onEnterStying () {
+    document.body.style.setProperty("background", "#B9F680", "important");
+    document.documentElement.style.setProperty('--white', '#000000');
+    document.documentElement.style.setProperty('--light_em', '#2d2d2d');
+    document.documentElement.style.setProperty('--light_grad', '#1b1b1b');
+}
+
+function onLeaveStying () {
+    document.body.style.setProperty("background", "black", "important");
+    document.documentElement.style.setProperty('--white', '#ffffff');
+    document.documentElement.style.setProperty('--light_em', '#dededecb');
+    document.documentElement.style.setProperty('--light_grad', '#ddddddde');
+}
+
 
 // portfolio 
 var heading_tl = gsap.timeline({
@@ -378,7 +426,7 @@ heading_tl.from(".contactSection .contactSecItem", {
     duration: 0.6,
     stagger: 0.3,
     ease: 'back.out'
-},"0.5");
+}, "0.5");
 
 heading_tl.from(".subscribeSection .subscribeSecItem", {
     opacity: 0,

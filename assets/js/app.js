@@ -15,12 +15,13 @@ $(window).on('load resize', function () {
 var cardWidth = $(".portfolio_card").width();
 var transformSize = cardWidth * 5.5;
 gsap.to(".portfolio_section .portfolioCardsContainer", {
-    duration: 4,
+    duration: 6,
     x: `-${transformSize}px`,
     scrollTrigger: {
         trigger: ".portfolio_section",
         pin: true,
-        scrub: 2,
+        scrub: 3,
+        markers: true
     }
 });
 
