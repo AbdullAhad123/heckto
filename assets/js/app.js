@@ -1,3 +1,5 @@
+gsap.registerPlugin();
+
 $(window).on('load resize', function () {
     const el1 = $(".big_wrapper_right");
     const el2 = $(".big_wrapper_left");
@@ -57,3 +59,25 @@ $("#subscribe_btn").on('click', function () {
     }
 
 })
+
+var swiper = new Swiper(".teamSwiper", {
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    loop: true,
+    breakpoints: {
+        640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+        },
+        1024: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+        },
+    },
+});

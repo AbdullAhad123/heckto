@@ -386,20 +386,6 @@ nav.navbar {
 }
 
 /* contact  */
-#contactContainer {
-    height: auto;
-    width: auto;
-    background: url(assets/img/bg_shining.webp), #0c0c0c;
-    background-size: cover;
-}
-
-#contactContainer .badgeItem {
-    position: absolute;
-    top: -25px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
 .contactInput {
     padding: 1.5rem 1.25rem !important;
     background: #1212128a !important;

@@ -1,3 +1,5 @@
+gsap.registerPlugin();
+
 var hero_tl = gsap.timeline();
 
 hero_tl.from("#nav", {
@@ -246,7 +248,7 @@ heading_tl.from("#about .sectionHeading span", {
     opacity: 0,
     duration: 0.75,
     stagger: 0.3,
-    ease: "power3.out" // animation ko smooth banata hai
+    ease: "power3.out"
 });
 
 heading_tl.from(".aboutCardCont .col-12", {
@@ -256,6 +258,7 @@ heading_tl.from(".aboutCardCont .col-12", {
     duration: 0.8
 })
 
+// cta 
 gsap.timeline({
     scrollTrigger: {
         trigger: "#callToAction",
@@ -293,6 +296,36 @@ function onLeaveStying () {
     document.documentElement.style.setProperty('--light_em', '#dededecb');
     document.documentElement.style.setProperty('--light_grad', '#ddddddde');
 }
+
+var heading_tl = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".ctaBox",
+        start: "top 50%",
+    }
+});
+
+heading_tl.from(".ctaBox .sectionHeading", {
+    opacity: 0,
+    x: 250,
+    duration: 0.5,
+});
+
+heading_tl.from(".ctaBox .sectionText", {
+    opacity: 0,
+    x: 300,
+    duration: 0.3
+});
+
+heading_tl.from(".ctaBox .sectionBtn", {
+    opacity: 0,
+    x: 200,
+    duration: 0.25
+});
+
+heading_tl.from(".ctaBox .sectionImg", {
+    opacity: 0,
+    duration: 0.5
+}, "0.75");
 
 
 // portfolio 
@@ -367,6 +400,37 @@ heading_tl.from(".servicesCardCont_2 .col-12", {
     opacity: 0,
     duration: 0.75,
     stagger: 0.3,
+    ease: "power2.out"
+});
+
+// team 
+
+
+
+var heading_tl = gsap.timeline({
+    scrollTrigger: {
+        trigger: "#team",
+        start: "top -65%",
+    }
+});
+
+heading_tl.from("#team .title_badge", {
+    scale: 0,
+    duration: 0.3,
+    ease: "back.out"
+});
+
+heading_tl.from("#team .sectionHeading", {
+    x: 200,
+    opacity: 0,
+    duration: 0.75,
+});
+
+heading_tl.from("#team .swiper-slide", {
+    y: 200,
+    opacity: 0,
+    duration: 0.5,
+    stagger: 0.12,
     ease: "power2.out"
 });
 

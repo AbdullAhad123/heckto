@@ -241,6 +241,11 @@ select:-webkit-autofill:focus {
 .shiny_btn {
     position: relative;
     overflow: hidden;
+    user-select: none !important;
+    -ms-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-touch-select: none !important;
+    -webkit-user-select: none !important;
 }
 
 .shiny_btn::after {
