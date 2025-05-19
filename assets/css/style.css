@@ -223,6 +223,18 @@ nav.navbar {
     text-align: center;
 }
 
+/* cta  */
+#callToAction {
+    height: 100vh;
+    width: auto;
+}
+
+.ctaBox {
+    height: fit-content;
+    width: auto;
+    background: #B9F680;
+}
+
 /* portfolio  */
 
 .portfolio_card {
@@ -328,6 +340,49 @@ nav.navbar {
 
 .services_content {
     background: #000000c7;
+}
+
+/* team  */
+.teamCard {
+    border: 1px solid #dedede2f;
+    background: #00000083;
+    position: relative;
+}
+
+.teamImg {
+    min-height: 140px;
+    min-width: 140px;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.teamImg img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.25s;
+    filter: grayscale(1);
+}
+
+.teamCard:hover .teamImg img {
+    filter: grayscale(0);
+}
+
+.embosedImg {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    height: 85px;
+    width: auto;
+    opacity: 0.5;
+}
+
+@media (max-width: 375px) {
+    .embosedImg {
+        display: none
+    }
 }
 
 /* contact  */
