@@ -225,7 +225,8 @@ nav.navbar {
 
 /* cta  */
 #callToAction {
-    height: 100vh;
+    min-height: 100vh;
+    max-height: fit-content;
     width: auto;
 }
 

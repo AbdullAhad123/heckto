@@ -61,10 +61,10 @@ $("#subscribe_btn").on('click', function () {
 })
 
 var swiper = new Swiper(".teamSwiper", {
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 2500,
+    //     disableOnInteraction: false,
+    // },
     loop: true,
     breakpoints: {
         640: {
