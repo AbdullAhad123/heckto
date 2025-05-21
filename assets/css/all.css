@@ -489,6 +489,12 @@ select:-webkit-autofill:focus {
     width: 100%;
 }
 
+@media (max-width: 475px) {
+    #navContactBtn {
+        display: none !important;
+    }
+}
+
 /* top nav  */
 #top_nav {
     position: fixed;

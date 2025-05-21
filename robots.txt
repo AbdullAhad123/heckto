@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /du
+Disallow: /it
+
+Sitemap: https://heckto.com/sitemap.xml
