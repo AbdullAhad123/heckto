@@ -513,3 +513,11 @@ heading_tl.from(".copyrightText", {
     opacity: 0,
     duration: 0.5,
 });
+
+heading_tl.from(".sitemap_links", {
+    y: 50,
+    opacity: 0,
+    duration: 0.5,
+    duration: 0.6,
+    stagger: 0.2,
+});
