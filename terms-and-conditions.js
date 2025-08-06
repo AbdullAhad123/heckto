@@ -4,7 +4,7 @@ const translations = {
         "siteTitle": "HECKTO",
         "summaryTitle": "Terms and Conditions of www.heckto.com",
         "summaryText": "Welcome to the Terms & Conditions page of www.heckto.com. This document will help you understand how you can use our services and what you can expect from us.",
-        "lastUpdated": "Latest update: 4 July 2025",
+        "lastUpdated": "Latest update: 7 August 2025",
         "ownerControllerTitle": "Owner and Data Controller",
         "ownerName": "Daniel Asghar",
         "ownerRole": "Business Development Manager & CEO",
@@ -114,9 +114,9 @@ const translations = {
         "contactAddress": "8 Cunningham Court, Blackburn, UK, BB1 2QX",
         "contactEmail": "Owner contact email: sales@heckto.it",
         "downloadsTitle": "Downloadable documents",
-        "download1": "Privacy Policy - Latest update: 4 July 2025",
-        "download2": "Cookie Policy - Latest update: 4 July 2025",
-        "download3": "Terms and Conditions - Latest update: 4 July 2025"
+        "download1": "Privacy Policy - Latest update: 7 August 2025",
+        "download2": "Cookie Policy - Latest update: 7 August 2025",
+        "download3": "Terms and Conditions - Latest update: 7 August 2025"
     },
     it: {
         "pageTitle": "Termini e Condizioni di Heckto",
