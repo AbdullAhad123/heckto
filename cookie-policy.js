@@ -1,5 +1,4 @@
-gsap.registerPlugin(ScrollTrigger);
-// Cookie Policy - Complete JS with Translations and Animations
+// Cookie Policy 
 const translations = {
     en: {
         "pageTitle": "Heckto Cookie Policy",

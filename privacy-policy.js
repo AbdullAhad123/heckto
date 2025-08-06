@@ -1,4 +1,4 @@
-// Ensure GSAP and ScrollTrigger are loaded
+
 gsap.registerPlugin(ScrollTrigger);
 
 // 1. Language Data
